@@ -86,6 +86,7 @@ func (c *Client) Do(req *Request) *Response {
 		ctx:        ctx,
 		cancel:     cancel,
 		bufferSize: req.BufferSize,
+		CanResume:  true,
 	}
 	if resp.bufferSize == 0 {
 		// default to Client.BufferSize
